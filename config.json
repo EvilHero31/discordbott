@@ -1,6 +1,6 @@
 {
   "PREFIX": "+",
-  "URL_SERVER": "http://localhost:30120",
+  "URL_SERVER": "87.237.54.14:30100",
   "SERVER_NAME": "LSRP Romania",
   "LOG_LEVEL": "2",
   "BOT_TOKEN": "ODA1MDQ4NDY0NTgzOTUwMzM2.YBVNzw.5aprLtti9m5UEg2I5UcByaF_9PY",
