@@ -82,7 +82,7 @@ exports.start = function (SETUP) {
 
   const LOG_LEVEL =
     SETUP.LOG_LEVEL !== undefined ? parseInt(SETUP.LOG_LEVEL) : LOG_LEVELS.INFO;
-  const BOT_TOKEN = procces.env.token;
+  const BOT_TOKEN = SETUP.BOT_TOKEN;
   const CHANNEL_ID = SETUP.CHANNEL_ID;
   const MESSAGE_ID = SETUP.MESSAGE_ID;
   const SUGGESTION_CHANNEL = SETUP.SUGGESTION_CHANNEL;
