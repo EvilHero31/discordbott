@@ -283,14 +283,14 @@ exports.start = function (SETUP) {
             let embed = UpdateEmbed()
               .addField("Server Status", ":white_check_mark: Online", true)
               .addField(
-                "Queue",
+                "Coada",
                 queue === "Enabled" || queue === undefined
                   ? "0"
                   : queue.split(":")[1].trim(),
                 true
               )
               .addField(
-                "Online players",
+                "Jucatori Online",
                 `${players.length}/${MAX_PLAYERS}\n\u200b\n`,
                 true
               );
@@ -303,7 +303,7 @@ exports.start = function (SETUP) {
               // for (var i=0;i<players.length;i++) {
               //   fields[i%4 >= 2 ? 1 : 0] += `${players[i].name}${i % 2 === 0 ? '\u200e' : '\n\u200f'}`;
               // }
-              fields[0] = `**Players Connected:**\n`;
+              fields[0] = `**Jucatori conectati:**\n`;
               for (var i = 0; i < players.length; i++) {
                 fields[(i + 1) % fieldCount] += `${players[i].name.substr(
                   0,
@@ -333,8 +333,8 @@ exports.start = function (SETUP) {
 
   bot.on("ready", () => {
     log(LOG_LEVELS.INFO, "Started...");
-    bot.user.setActivity("[FIVEM BOT] by SOUSA#7255", {
-      url: "https://www.twitch.tv/Vasco14PT",
+    bot.user.setActivity("LSRP Romania", {
+      url: "https://discord.io/LSRP_HARD",
       type: "PLAYING",
     });
     bot

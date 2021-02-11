@@ -39,7 +39,7 @@ const TEMPLATE = {
 };
 const SAVE_FILE = './config.json';
 
-function loadValue(key) {
+--[[function loadValue(key) {
   return new Promise((resolve,reject) => {
     const io = readline.createInterface({
       input: process.stdin,
@@ -50,7 +50,7 @@ function loadValue(key) {
       resolve(value);
     });
   })
-}
+}]]
 
 exports.createValues = function(keys) {
   return new Promise((resolve,reject) => {
