@@ -13,7 +13,7 @@ const TEMPLATE = {
   },
   'BOT_TOKEN': {
     'message': 'Discord bot token',
-    'required': true,
+    'required': false,
   },
   'CHANNEL_ID': {
     'message': 'Channel id for updates to be pushed to',

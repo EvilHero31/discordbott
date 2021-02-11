@@ -82,7 +82,6 @@ exports.start = function (SETUP) {
 
   const LOG_LEVEL =
     SETUP.LOG_LEVEL !== undefined ? parseInt(SETUP.LOG_LEVEL) : LOG_LEVELS.INFO;
-  const BOT_TOKEN = SETUP.BOT_TOKEN;
   const CHANNEL_ID = SETUP.CHANNEL_ID;
   const MESSAGE_ID = SETUP.MESSAGE_ID;
   const SUGGESTION_CHANNEL = SETUP.SUGGESTION_CHANNEL;
@@ -545,7 +544,7 @@ exports.start = function (SETUP) {
   });
 
   bot
-    .login(BOT_TOKEN)
+    .login(process.env.token)
     .then(null)
     .catch(() => {
       log(LOG_LEVELS.ERROR, "Unable to login check your login token");
