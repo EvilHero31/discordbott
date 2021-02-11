@@ -5,7 +5,7 @@ let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 
 module.exports.run = async (bot, message, args) => {
   //!warn @daeshan <reason>
-  if (!message.member.hasPermission("MANAGE_MEMBERS"))
+  if (!message.member.hasPermission("MANAGE_ROLES"))
     return message.reply("No can do pal!");
   let wUser =
     message.guild.member(message.mentions.users.first()) ||
