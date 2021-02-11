@@ -36,7 +36,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Number of Warnings", warns[wUser.id].warns)
     .addField("Reason", reason);
 
-  let warnchannel = message.guild.channels.find(`name`, "hall-of-shame");
+  let warnchannel = message.guild.channels.find(`name`, "├❌warn-list");
   if (!warnchannel) return message.reply("Couldn't find channel");
 
   warnchannel.send(warnEmbed);
