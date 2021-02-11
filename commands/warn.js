@@ -42,7 +42,7 @@ module.exports.run = async (bot, message, args) => {
   warnchannel.send(warnEmbed);
 
   if (warns[wUser.id].warns == 2) {
-    let muterole = message.guild.roles.find(`name`, "[🤐]muted");
+    let muterole = message.guild.roles.find(`name`, "Muted");
     if (!muterole) return message.reply("You should create that role dude.");
 
     let mutetime = "10m"; // time muded xs / xm /xh /xd
