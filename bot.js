@@ -250,7 +250,7 @@ exports.start = function (SETUP) {
 
   bot.on("message", (message) => {
     //whenever a message is sent
-    if (!message.member.hasPermission("ADMINISTRATOR")) {
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) {
       if (
         message.content.includes("discord.gg/") ||
         message.content.includes("discordapp.com/invite/") ||
