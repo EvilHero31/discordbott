@@ -262,9 +262,9 @@ exports.start = function (SETUP) {
           .then(
             message.channel.send({
               embed: {
-                title: `Discord link sent by ${Author} deleted`,
+                title: `Link-ul de Discord trimis de ${Author} a fost sters`,
                 color: 16711680,
-                description: "Sending link is against the rules!",
+                description: "Nu este permis sa faci asta!",
               },
             })
           );

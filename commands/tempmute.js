@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
   );
   if (!tomute) return message.reply("Couldn't find user.");
   if (tomute.hasPermission("MANAGE_MESSAGES"))
-    return message.reply("Can't mute them!");
+    return message.reply("Nu poti sa ii dai Mute!");
   let muterole = message.guild.roles.find(`name`, "Muted");
   //start of create role
   if (!muterole) {
@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
   }
   //end of create role
   let mutetime = args[1];
-  if (!mutetime) return message.reply("You didn't specify a time!");
+  if (!mutetime) return message.reply("Specifica un timp!");
 
   await tomute.addRole(muterole.id);
   message.reply(`<@${tomute.id}> has been muted for ${ms(ms(mutetime))}`);
