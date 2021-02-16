@@ -250,12 +250,12 @@ exports.start = function (SETUP) {
 
   bot.on("message", (message) => {
     //whenever a message is sent
-    if (!message.member.hasPermission("MANAGE_MESSAGES")) {
-      if (
-        message.content.includes("discord.gg/") ||
-        message.content.includes("discordapp.com/invite/") ||
-        message.content.includes("discord.me/")
-      ) {
+    if (
+      message.content.includes("discord.gg/") ||
+      message.content.includes("discordapp.com/invite/") ||
+      message.content.includes("discord.me/")
+    ) {
+      if (!message.member.hasPermission("MANAGE_MESSAGES")) {
         const Author = message.member.user.tag;
         message
           .delete() //delete the message
