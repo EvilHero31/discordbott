@@ -1,6 +1,6 @@
 {
   "PREFIX": "+",
-  "URL_SERVER": "http://167.172.180.203:30120/webadmin/",
+  "URL_SERVER": "http://167.172.180.203:30120",
   "SERVER_NAME": "LSRP Romania",
   "LOG_LEVEL": "2",
   "CHANNEL_ID": "826496873526329414",
