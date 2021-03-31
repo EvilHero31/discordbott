@@ -71,8 +71,8 @@ exports.start = function (SETUP) {
   const port = process.env.PORT;
   const URL_SERVER = (host, port);
 
-  const URL_PLAYERS = new URL("/players.json", host, port).toString();
-  const URL_INFO = new URL("/info.json", host, port).toString();
+  const URL_PLAYERS = new URL("/players.json", URL_SERVER).toString();
+  const URL_INFO = new URL("/info.json", URL_SERVER).toString();
   const MAX_PLAYERS = 64;
   const TICK_MAX = 1 << 9; // max bits for TICK_N
   const FETCH_TIMEOUT = 900;
