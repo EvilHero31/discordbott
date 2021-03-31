@@ -334,7 +334,7 @@ exports.start = function (SETUP) {
   bot.on("ready", () => {
     log(LOG_LEVELS.INFO, "Started...");
     bot.user.setActivity("LSRP Romania", {
-      url: "https://discord.io/LSRP_HARD",
+      url: "https://discord.io/LSRP_RO",
       type: "PLAYING",
     });
     bot
