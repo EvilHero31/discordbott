@@ -68,7 +68,7 @@ const USER_AGENT = `bot ${require("./package.json").version} , Node ${
 
 exports.start = function (SETUP) {
   const host = "http://167.172.180.203:";
-  const port = process.env.PORT || 30120;
+  const port = process.env.PORT;
   const URL_SERVER = host, port;
 
   const URL_PLAYERS = new URL("/players.json", host, port).toString();
