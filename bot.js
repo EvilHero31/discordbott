@@ -67,10 +67,12 @@ const USER_AGENT = `bot ${require("./package.json").version} , Node ${
 } (${process.platform}${process.arch})`;
 
 exports.start = function (SETUP) {
-  const URL_SERVER = "http://167.172.180.203", process.env.PORT || 30120;
+  const host = "http://167.172.180.203:";
+  const port = process.env.PORT || 30120;
+  const URL_SERVER = host, port;
 
-  const URL_PLAYERS = new URL("/players.json", "http://167.172.180.203:", process.env.PORT || 30120).toString();
-  const URL_INFO = new URL("/info.json", "http://167.172.180.203", process.env.PORT || 30120).toString();
+  const URL_PLAYERS = new URL("/players.json", host, port).toString();
+  const URL_INFO = new URL("/info.json", host, port).toString();
   const MAX_PLAYERS = 64;
   const TICK_MAX = 1 << 9; // max bits for TICK_N
   const FETCH_TIMEOUT = 900;
