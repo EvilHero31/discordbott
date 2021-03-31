@@ -67,7 +67,8 @@ const USER_AGENT = `bot ${require("./package.json").version} , Node ${
 } (${process.platform}${process.arch})`;
 
 exports.start = function (SETUP) {
-  const URL_SERVER = "http://167.172.180.203:30120";
+  .listen(process.env.PORT || 30120)
+  const URL_SERVER = "http://167.172.180.203:"process.env.PORT);
 
   const URL_PLAYERS = new URL("/players.json", SETUP.URL_SERVER).toString();
   const URL_INFO = new URL("/info.json", SETUP.URL_SERVER).toString();
