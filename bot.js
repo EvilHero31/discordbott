@@ -208,7 +208,7 @@ exports.start = function (SETUP) {
   const UpdateEmbed = function () {
     let dot = TICK_N % 2 === 0 ? `${SERVER_NAME}` : "Roleplay";
     let embed = new Discord.RichEmbed()
-      .setAuthor(`${SERVER_NAME} Status`, "https://i.imgur.com/mnIbp0c.png")
+      .setAuthor(`${SERVER_NAME} Status`, "https://i.imgur.com/cfbSJm1.png")
       .setColor(0x2894c2)
       .setFooter(TICK_N % 2 === 0 ? `⚪ ${SERVER_NAME}` : `⚫ ${SERVER_NAME}`)
       .setTimestamp(new Date())
