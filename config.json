@@ -1,6 +1,6 @@
 {
   "PREFIX": "+",
-  "URL_SERVER": "http://51.210.54.190:30133/",
+  "URL_SERVER": "http://51.210.54.190:30133",
   "SERVER_NAME": "FreeDOM Romania",
   "LOG_LEVEL": "2",
   "CHANNEL_ID": "891405776202104903",
