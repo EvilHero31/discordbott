@@ -225,7 +225,7 @@ exports.start = function (SETUP) {
 
   const offline = function () {
     log(LOG_LEVELS.SPAM, Array.from(arguments));
-    log(LOG_LEVELS.INFO, LAST_COUNT)
+    log(LAST_COUNT)
     if (LAST_COUNT !== null)
       log(
         LOG_LEVELS.INFO,
