@@ -278,7 +278,7 @@ exports.start = function (SETUP) {
       .then((vars) => {
         getPlayers()
           .then((players) => {
-            log(LOG_LEVELS.INFO, players.length, players)
+            log(LOG_LEVELS.INFO, players.length + players)
             if (players.length !== LAST_COUNT)
               log(LOG_LEVELS.INFO, `${players.length} players`);
             let queue = vars["Queue"];
