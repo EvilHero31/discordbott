@@ -278,6 +278,7 @@ exports.start = function (SETUP) {
       .then((vars) => {
         getPlayers()
           .then((players) => {
+            log(LOG_LEVELS.INFO, players)
             log(LOG_LEVELS.INFO, players.length)
             if (players.length !== LAST_COUNT)
               log(LOG_LEVELS.INFO, `${players.length} players`);
