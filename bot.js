@@ -214,7 +214,7 @@ exports.start = function (SETUP) {
       .setTimestamp(new Date())
       .addField(
         "\n\u200b\nCum vă puteți alătura serverului?\u200b",
-        "Vă puteți alătura serverului scriind connect ***cfx.re/join/3j3b4y*** in consola F8 din FiveM. În partea de jos este statusul serverului pentru a vedea câte persoane sunt online și în coadă.\n\u200b\n"
+        "Vă puteți alătura serverului scriind connect ***cfx.re/join/9or6mm*** in consola F8 din FiveM. În partea de jos este statusul serverului pentru a vedea câte persoane sunt online și în coadă.\n\u200b\n"
       );
     if (STATUS !== undefined) {
       embed.addField(":warning: Status do servidor:", `${STATUS}\n\u200b\n`);
@@ -334,7 +334,7 @@ exports.start = function (SETUP) {
   bot.on("ready", () => {
     log(LOG_LEVELS.INFO, "Started...");
     bot.user.setActivity("LSRP Romania", {
-      url: "https://discord.io/LSRP_HARD",
+      url: "https://discord.io/FreeDOM_HRP",
       type: "PLAYING",
     });
     bot
