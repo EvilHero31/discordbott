@@ -225,7 +225,7 @@ exports.start = function (SETUP) {
 
   const offline = function () {
     log(LOG_LEVELS.SPAM, Array.from(arguments));
-    log(LAST_COUNT)
+    log(LOG_LEVELS.INFO, LAST_COUNT)
     if (LAST_COUNT !== null)
       log(
         LOG_LEVELS.INFO,
@@ -278,7 +278,7 @@ exports.start = function (SETUP) {
       .then((vars) => {
         getPlayers()
           .then((players) => {
-            log(players.length)
+            log(LOG_LEVELS.INFO, players.length)
             if (players.length !== LAST_COUNT)
               log(LOG_LEVELS.INFO, `${players.length} players`);
             let queue = vars["Queue"];
