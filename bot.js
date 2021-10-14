@@ -333,7 +333,7 @@ exports.start = function (SETUP) {
 
   bot.on("ready", () => {
     log(LOG_LEVELS.INFO, "Started...");
-    bot.user.setActivity("LSRP Romania", {
+    bot.user.setActivity("FreeDOM Romania", {
       url: "https://discord.io/FreeDOM_HRP",
       type: "PLAYING",
     });
