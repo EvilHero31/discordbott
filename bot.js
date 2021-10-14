@@ -115,7 +115,9 @@ exports.start = function (SETUP) {
           res
             .json()
             .then((players) => {
+              log(LOG_LEVELS.INFO, players.length)
               resolve(players);
+              log(LOG_LEVELS.INFO, players.length)
             })
             .catch(reject);
         })
