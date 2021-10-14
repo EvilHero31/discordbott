@@ -115,9 +115,7 @@ exports.start = function (SETUP) {
           res
             .json()
             .then((players) => {
-              log(LOG_LEVELS.INFO, players.length)
               resolve(players);
-              log(LOG_LEVELS.INFO, players.length)
             })
             .catch(reject);
         })
@@ -227,7 +225,7 @@ exports.start = function (SETUP) {
 
   const offline = function () {
     log(LOG_LEVELS.SPAM, Array.from(arguments));
-    log(LOG_LEVELS.INFO, LAST_COUNT)
+    log(LAST_COUNT)
     if (LAST_COUNT !== null)
       log(
         LOG_LEVELS.INFO,
@@ -280,7 +278,6 @@ exports.start = function (SETUP) {
       .then((vars) => {
         getPlayers()
           .then((players) => {
-            log(LOG_LEVELS.INFO, players)
             if (players.length !== LAST_COUNT)
               log(LOG_LEVELS.INFO, `${players.length} players`);
             let queue = vars["Queue"];
