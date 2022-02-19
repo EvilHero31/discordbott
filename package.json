@@ -11,7 +11,7 @@
   "author": "Douile / Roque",
   "license": "GPL-3.0",
   "dependencies": {
-    "discord.js": "^11.4.2",
+    "discord.js": "^12",
     "fetch-timeout": "0.0.2",
     "fs": "0.0.1-security",
     "libsodium-wrappers": "^0.7.4",
