@@ -22,7 +22,7 @@ bot.on('ready', () => {
     }).catch((error) => {
       console.log(error);
     });
-  }, 300000);
+  }, 1000);
 });
 
 bot.on('messageCreate', (message) => {
@@ -68,9 +68,8 @@ bot.on('messageCreate', (message) => {
     message.delete();
     Gamedig.query({
       type: 'fivem',
-      host: config.ipabs, // This needs to be a string
-      port: config.port // This needs to be a number & is optional, unless you're not using the default port for that gameserver type
-    }).then((state) => {
+      host: "135.125.197.3:30120", // This needs to be a string
+      }).then((state) => {
       let embed = new Discord.MessageEmbed()
         .setTitle("Server Stats")
         .addField('Name', state.name, true)
