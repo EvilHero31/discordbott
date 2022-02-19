@@ -21,6 +21,9 @@
     "uws": "^100.0.1",
     "ytdl-core": "^0.29.1"
   },
+  "engines": {
+    "npm": "6.x"
+  },
   "repository": {
     "type": "git",
     "url": ""
