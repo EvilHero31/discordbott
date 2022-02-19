@@ -6,14 +6,10 @@ const bot = new Discord.Client({
 });
 
 const config = require('./config.json');
-const Gamedig = require('gamedig');
+const snekfetch = require('snekfetch');
 
 bot.on('ready', () => {
-  var interval = setInterval(function () {
-    let guild = bot.guilds.cache.get(config.discord);
-    let channel = guild.channels.cache.get(config.channel);
-    bot.user.setActivity("test");
-  }, 1000);
+  snekfetch.get("http://135.125.197.3:30120/info.json").then(r => console.log(r.body));
 });
 
 bot.on('messageCreate', (message) => {
