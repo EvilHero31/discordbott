@@ -440,9 +440,9 @@ exports.start = function (SETUP) {
   });
 
   bot.on("message", async function (msg) {
-    if (msg.channel.id === "586631869928308743") {
-      await msg.react(bot.emojis.get("587057796936368128"));
-      await msg.react(bot.emojis.get("595353996626231326"));
+    if (msg.channel.id === "938702195203915798") {
+      await msg.react(bot.emojis.get("938702195203915798"));
+      await msg.react(bot.emojis.get("938702195203915798"));
     }
   });
 
