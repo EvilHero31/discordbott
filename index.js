@@ -9,7 +9,7 @@ const config = require('./config.json');
 const snekfetch = require('snekfetch');
 
 bot.on('ready', () => {
-  snekfetch.get("https://jsonplaceholder.typicode.com/posts").then(r => console.log(r.body));
+  snekfetch.get("http://135.125.197.3:30120/players.json").then(r => console.log(r.body));
 });
 
 bot.on('messageCreate', (message) => {
