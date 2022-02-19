@@ -12,16 +12,7 @@ bot.on('ready', () => {
   var interval = setInterval(function () {
     let guild = bot.guilds.cache.get(config.discord);
     let channel = guild.channels.cache.get(config.channel);
-    Gamedig.query({
-      type: 'fivem',
-      host: config.ipabs, // This needs to be a string
-      port: config.port // This needs to be a number & is optional, unless you're not using the default port for that gameserver type
-    }).then((state) => {
-      bot.user.setActivity(state.raw.clients + "/" + state.maxplayers);
-      channel.setName(state.raw.clients + " Connected"); // Enable or disable the Channel player count
-    }).catch((error) => {
-      console.log(error);
-    });
+    bot.user.setActivity("test");
   }, 1000);
 });
 
