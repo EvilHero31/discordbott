@@ -7,6 +7,6 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^13.6.0",
-    "gamedig": "^2.0.24"
+    "snekfetch": "^3.2.9"
   }
 }
