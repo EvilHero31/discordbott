@@ -1,12 +1,9 @@
 {
-    "SERVER_URL": "135.125.197.3:30120",
-    "SERVER_LOGO": "https://cdn.discordapp.com/attachments/866761468714942464/939929374487109743/5346346634634.png",
-    "SERVER_NAME": "Blade Romania",
-    "PREFIX": "+",
-    "CHANNELS_ID":{
-        "SUGGESTIONS":"938702195203915800",
-        "MEMES":"938702195203915802",
-        "ANIMALS":"938702195203915802"
-    }
-    
+    "prefix" : "!",
+    "discord" : "938702194461536287",
+    "channel" : "938702195593977888",
+    "ipabs" : "135.125.197.3",
+    "port" : "30120",
+    "activity" : "GameActivity",
+    "max" : "128"
 }

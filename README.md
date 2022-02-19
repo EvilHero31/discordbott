@@ -1,36 +1,53 @@
-# VSOUSA14 FIVEM DISCORD BOT
+# Fivem Discord Serverstats
 
-Self coded FiveM Discord Bot
+## Introduction
 
+A simple node.js bot to send serverstats, playerlist and playercount of a Fivem Server to a Discord channel.
 
-## HOW TO INSTALL
+## Needs
 
-### DEPENDENCIES
-   * [NodeJS](https://nodejs.org/en/)
-   * axios
-   * fs
-   * discord.js-pagination
-   * discordjs v12
-    
-### SETUP
+You need to install Node.js and have a discord bot token on this page : https://discord.com/developers/applications
 
-   1. Install NodeJS in your computer or VPS
-    
-   2. Download the source code
-    
-   3. Open config.json and configure the file
-     
-   4. Open your terminal, go to bot root folder using `cd` command and install the dependencies using `npm install`
-    
-   5. Open `start.bat` and you are good to go.
-    
-### SUPORT 
+## Installation
 
-   If you're having trouble setting up the bot, feel free to join my discord server: https://discord.gg/GWZsjkJ
-    
-   Setup video https://www.youtube.com/watch?v=FHnB-6bR6ak
-    
-### UPDATES
+Once you download the files and install node.js, make 'npm install' in the project folder. Then, go to the config.json file and add the asked informations
+```javascript
+{
+    "prefix" : "!", //Your bot prefix
+    "discord" : "Discord ID", //Discord server ID where the bot is
+    "channel" : "Voice Channel ID" //The channel were the playercount can be write
+    "ipabs" : "Server IP", //The server ip
+    "port" : "Server port (like 30120)", //The server port
+    "activity" : "GameActivity", //The message display on "Playing as"
+    "max" : "100", //Max users of the server
+    "token" : "" //Your bot token
+}
+```
+Here you can disable the playercount voice channel, just delete the line channel.setName.
+```javascript
+bot.on('ready', () => {
+  var interval = setInterval(function () {
+    let guild = bot.guilds.cache.get(config.discord);
+    let channel = guild.channels.cache.get(config.channel);
+    Gamedig.query({
+      type: 'fivem',
+      host: config.ipabs, // This needs to be a string
+      port: config.port // This needs to be a number & is optional, unless you're not using the default port for that gameserver type
+    }).then((state) => {
+      bot.user.setActivity(state.raw.clients + "/" + state.maxplayers);
+      channel.setName(state.raw.clients + " Connected"); // Enable or disable the Channel player count
+    }).catch((error) => {
+      console.log(error);
+    });
+  }, 1000);
+});
+```
 
-   I will keep updating this bot, so stay tuned in my discord server, there i will give news and updates before the code goes live.
+When you run the bot, the three commands are !serverstats, !playerlist and !playercount.
 
+## Others Bots
+
+Discord-global-chat : https://github.com/bycop/Discord-global-chat <br>
+Discord-Image-to-twitter : https://github.com/bycop/Discord-Image-to-twitter <br>
+Discord-Serverlist-InviteLinkByID : https://github.com/bycop/Discord-Serverlist-InviteLinkByID <br>
+Discord-csgo-Serverstats : https://github.com/bycop/Discord-csgo-Serverstats
